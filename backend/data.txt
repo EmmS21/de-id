@@ -1,0 +1,30 @@
+**Patient Information:**
+- Name: John Doe
+- Age: 45
+- Sex: Male
+- Medical Record Number: 1234567890
+- Date of Examination: May 11, 2023
+
+**Referring Physician:** Dr. Mary Smith
+
+**Radiology Examination:** Chest X-Ray
+
+**Clinical Indication:** Evaluation for potential pneumonia. Patient presented with cough, shortness of breath, and fever.
+
+**Technique:** Posteroanterior and lateral chest radiographs were obtained.
+
+**Findings:**
+The heart size is within normal limits. The mediastinal and hilar contours are unremarkable. The pulmonary vasculature is not congested.
+There is a focal opacity in the right lower lung field, suggestive of a potential infiltrate. There are no nodules or masses. No pleural effusion or pneumothorax is identified. The osseous structures and soft tissues are within normal limits.
+
+**Impression:**
+1. Focal opacity in the right lower lung field which may represent a pneumonic infiltrate. Clinical correlation is recommended.
+2. No evidence of pleural effusion or pneumothorax.
+3. Normal heart size and pulmonary vasculature.
+
+**Recommendation:**
+Given the clinical history and the radiographic findings, it may be beneficial to follow up with a CT chest for further evaluation of the right lower lung field opacity. Please discuss with the patient and consider ordering as clinically indicated.
+
+**Radiologist:** Dr. Jane Doe, MD, Radiology
+
+**Date of Report:** May 12, 2023
