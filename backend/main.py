@@ -60,24 +60,6 @@ def deidentify_text(text: str, predictions, tokens):
     final_text = tokenizer.convert_tokens_to_string(anonymized_text)
     return final_text
 
-# def deidentify_text(text: str, predictions, tokens):
-#     anonymized_text = [] 
-#     token_texts = [tokenizer.decode([tok], skip_special_tokens=True) for tok in tokens['input_ids'][0]]
-
-#     for idx, (token_text, pred) in enumerate(zip(token_texts, predictions[0])):
-#         label = model.config.id2label[pred.item()]
-        
-#         if 'B-PATIENT' in label or 'L-PATIENT' in label or 'U-AGE' in label or 'U-ID' in label or 'B-DATE' in label or 'I-DATE' in label or 'L-DATE' in label or 'B-STAFF' in label or 'L-STAFF' in label:
-#             if not anonymized_text or anonymized_text[-1] != "[REDACTED]":
-#                 anonymized_text.append("[REDACTED]")
-#         else:
-#             anonymized_text.append(token_text)
-
-#     # Join all parts and handle spacing between tokens correctly
-#     final_text = ''.join([(' ' + token if idx > 0 and token not in [',', '.', '!', '?', ':', ';', "'s"] else token) for idx, token in enumerate(anonymized_text)])
-#     return final_text
-
-
 @app.post("/deidentify")
 def deidentify(clinical_text: str = Body(..., embed=True)):
     print('text', clinical_text)
