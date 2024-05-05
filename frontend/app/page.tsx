@@ -5,7 +5,7 @@ import { useState } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 
 export default function Home() {
-  const [sampleData, setSampleData] = useState('');
+  const [sampleData, setSampleData] = useState<string | React.ReactElement[]>('');
   const [clearData, setClearData] = useState('');
   const [deIdData, setDeIdData] = useState('');
   const [isLoading, setIsLoading] = useState(false); 
@@ -28,11 +28,11 @@ export default function Home() {
   const fetchSampleData = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('http://127.0.0.1:8000/sample-data');
+      const response = await fetch('https://de-id.onrender.com/sample-data');
       const jsonData = await response.json();
       const dataText = jsonData.data; 
       setClearData(dataText)
-      const formattedData = formatText(dataText); // Format the text with HTML elements
+      const formattedData = formatText(dataText); 
       setSampleData(formattedData);
     } catch (error) {
       console.error('Failed to fetch data:', error);
@@ -55,7 +55,7 @@ export default function Home() {
         const requestData = {
             clinical_text: formattedSampleData
         };
-        const response = await fetch('http://127.0.0.1:8000/deidentify', {
+        const response = await fetch('https://de-id.onrender.com/deidentify', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -111,7 +111,6 @@ export default function Home() {
     }
 };
 
-    
   return (
     <main className="flex min-h-screen flex-col items-center justify-start pt-8 pb-24 px-24 space-y-4">
       <div className="flex flex-col items-center space-y-4">
