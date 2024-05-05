@@ -72,7 +72,7 @@ export default function Home() {
         }
 
         const sections = deIdentifiedText.split('\n\n'); // Split by double newline
-        const formattedSections = sections.map((section, index) => {
+        const formattedSections = sections.map((section: string, index: number) => {
             const lines = section.split('\n'); // Split each section by newline
             return (
                 <div key={index}>
