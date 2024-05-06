@@ -67,9 +67,9 @@ export default function Home() {
         let deIdentifiedText = jsonData.deidentified_text;
 
         // Remove <s> and </s> if present
-        if (deIdentifiedText.startsWith('<s>') && deIdentifiedText.endsWith('</s>')) {
-            deIdentifiedText = deIdentifiedText.substring(3, deIdentifiedText.length - 4).trim();
-        }
+        // if (deIdentifiedText.startsWith('<s>') && deIdentifiedText.endsWith('</s>')) {
+        //     deIdentifiedText = deIdentifiedText.substring(3, deIdentifiedText.length - 4).trim();
+        // }
 
         const sections = deIdentifiedText.split('\n\n'); // Split by double newline
         const formattedSections = sections.map((section: string, index: number) => {
